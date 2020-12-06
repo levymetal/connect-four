@@ -7,11 +7,8 @@ class Analyzer {
   get winner() {
     for (let y = 0; y < 6; y++) {
       for (let x = 0; x < 7; x++) {
-        const winner =
-          new Vector((_, i) => this.board[y + 0]?.[x + i]).winner || // horizontal
-          new Vector((_, i) => this.board[y + i]?.[x + 0]).winner || // vertical
-          new Vector((_, i) => this.board[y + i]?.[x - i]).winner || // positive diagonal
-          new Vector((_, i) => this.board[y + i]?.[x + i]).winner; // negative diagonal
+        const build = (yi, xi) => new Vector((_, i) => this.board[y + yi * i]?.[x + xi * i]).winner;
+        const winner = build(0, 1) || build(1, 0) || build(1, -1) || build(1, 1);
         if (winner) return winner;
       }
     }

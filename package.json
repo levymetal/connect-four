@@ -2,7 +2,7 @@
   "name": "connect-four",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "analyzer.js",
   "scripts": {
     "test": "jest"
   },

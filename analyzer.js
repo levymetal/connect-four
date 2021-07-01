@@ -1,4 +1,4 @@
-class Detector {
+class Analyzer {
   constructor(seed) {
     if (typeof seed !== 'string' || seed.length !== 7 * 6 || seed.match(/[^012]/)) throw new Error('invalid seed');
     this.board = seed.match(/.{7}/g).map(row => row.split('').map(Number));
@@ -28,4 +28,4 @@ class Vector {
   }
 }
 
-module.exports = Detector;
+module.exports = Analyzer;

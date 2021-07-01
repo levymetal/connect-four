@@ -2,7 +2,7 @@
 
 ### What
 
-A connect-four win detector. Not the dryest solution but reasonably efficient and easy to follow.
+A Connect Four analyzer capable of detecting winning vectors. Not the dryest solution but reasonably efficient and easy to follow.
 
 ### Requirements
 
